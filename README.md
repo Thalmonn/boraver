@@ -16,11 +16,6 @@
   <p align="center">
     A Discord bot that allows you to match with people to watch movies and TV shows. Also allow to seek data about the content of schedule.
     <br />
-    <a href="https://github.com/Thalmonn/boraver"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/Thalmonn/boraver">View Demo</a>
-    ·
     <a href="https://github.com/Thalmonn/boraver/issues">Report Bug</a>
     ·
     <a href="https://github.com/Thalmonn/boraver/issues">Request Feature</a>
@@ -36,18 +31,13 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
+
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 
 <!-- LICENSE -->
@@ -58,22 +48,17 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Thalmonn Sales - [@thalmonn](https://twitter.com/thalmonn) - thalmonnsales@gmail.com
-
-Project Link: [https://github.com/Thalmonn/boraver](https://github.com/Thalmonn/boraver)
-
+[![Twitter][twitter-shield][twitter-url]] - [![LinkedIn][linkedin-shield]][linkedin-url] - [![E-mail][gmail-shield]][gmail-url]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Thalmonn/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/Thalmonn/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Thalmonn/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/Thalmonn/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/Thalmonn/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/Thalmonn/repo/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Thalmonn/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/Thalmonn/repo/issues
+[issues-url]: https://github.com/Thalmonn/boraver/issues
 [license-shield]: https://img.shields.io/github/license/Thalmonn/repo.svg?style=for-the-badge
-[license-url]: https://github.com/Thalmonn/repo/blob/master/LICENSE.txt
+[license-url]: https://github.com/Thalmonn/boraver/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/Thalmonn
+[twitter-shield]: https://img.shields.io/badge/-Twitter-black.svg?style=for-the-badge&logo=twitter&colorB=555
+[twitter-url]: https://twitter.com/thalmonn
+[gmail-shield]: https://img.shields.io/badge/-Gmail-black.svg?style=for-the-badge&logo=gmail&colorB=555
+[gmail-url]: thalmonnsales@gmail.com
