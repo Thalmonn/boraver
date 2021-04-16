@@ -54,10 +54,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [issues-shield]: https://img.shields.io/github/issues/Thalmonn/boraver.svg?style=for-the-badge
 [issues-url]: https://github.com/Thalmonn/boraver/issues
 [license-shield]: https://img.shields.io/github/license/Thalmonn/boraver.svg?style=for-the-badge
-[license-url]: https://github.com/Thalmonn/boraver/blob/master/LICENSE.txt
+[license-url]: https://github.com/Thalmonn/boraver/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/Thalmonn
 [twitter-shield]: https://img.shields.io/badge/-Twitter-black.svg?style=for-the-badge&logo=twitter&colorB=555
 [twitter-url]: https://twitter.com/thalmonn
 [gmail-shield]: https://img.shields.io/badge/-Gmail-black.svg?style=for-the-badge&logo=gmail&colorB=555
-[gmail-url]: (thalmonnsales@gmail.com)
+[gmail-url]: mailto:thalmonnsales@gmail.com
