@@ -39,7 +39,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
 <!-- LICENSE -->
 ## License
 
@@ -52,7 +51,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[issues-shield]: https://img.shields.io/github/issues/thalmonn/boraver.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/Thalmonn/boraver.svg?style=for-the-badge
 [issues-url]: https://github.com/Thalmonn/boraver/issues
 [license-shield]: https://img.shields.io/github/license/Thalmonn/boraver.svg?style=for-the-badge
 [license-url]: https://github.com/Thalmonn/boraver/blob/main/LICENSE.txt
