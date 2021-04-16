@@ -52,9 +52,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[issues-shield]: https://img.shields.io/github/issues/thalmonn/repo.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/thalmonn/boraver.svg?style=for-the-badge
 [issues-url]: https://github.com/Thalmonn/boraver/issues
-[license-shield]: https://img.shields.io/github/license/Thalmonn/repo.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/Thalmonn/boraver.svg?style=for-the-badge
 [license-url]: https://github.com/Thalmonn/boraver/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/Thalmonn
