@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Thalmonn/boraver">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/Thalmonn/boraver/blob/main/assets/img/logo-nobg.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Bora Ver</h3>
