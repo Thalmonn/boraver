@@ -1,9 +1,11 @@
 import discord
 from discord.ext import commands
 import os
+import requests
 
 client = commands.Bot(command_prefix='bv!')
 token = os.getenv('DISCORD_BOT_TOKEN')
+api_token = os.getenv('THEMOVIEDB_API_KEY')
 
 @client.event
 async def on_ready():
@@ -14,11 +16,11 @@ async def on_ready():
     
 @client.command()
 async def ping(ctx):
-    await ctx.send('🏓 Pong com latência %s.' % str(round(client.latency, 2)))
+    await ctx.send(f'🏓 Pong com latência {round(client.latency, 2)}')
 
 @client.command()
 async def usercheck(ctx):
-    await ctx.send('Você é o usuário: %s.' % ctx.message.author.name)
+    await ctx.send(f'Você é o usuário: {ctx.message.author.name}.')
     
 @client.command()
 @commands.is_owner()
@@ -28,5 +30,11 @@ async def turnoff(ctx):
     print('Bot desligado com sucesso. Até a próxima.')
 
 # Teste de comandos para search
+
+@client.command()
+async def sm(ctx, movie):
+    await ctx.send('Buscando filme...')
+    response = requests.get(f'https://api.themoviedb.org/3/search/movie?api_key={api_token}&language=pt-BR&query={movie}&page=1&include_adult=false')
+    await ctx.send(f'{response.json()}')
 
 client.run(token)
