@@ -27,4 +27,6 @@ async def turnoff(ctx):
     await client.close()
     print('Bot desligado com sucesso. Até a próxima.')
 
+# Teste de comandos para search
+
 client.run(token)
