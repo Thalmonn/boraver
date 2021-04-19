@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 import os
 import requests
+from sm import get_movies_per_page
+from info import get_movie_info
 
 client = commands.Bot(command_prefix='bv!')
 token = os.getenv('DISCORD_BOT_TOKEN')
@@ -29,12 +31,37 @@ async def turnoff(ctx):
     await client.close()
     print('Bot desligado com sucesso. Até a próxima.')
 
-# Teste de comandos para search
-
 @client.command()
 async def sm(ctx, movie):
-    await ctx.send('Buscando filme...')
-    response = requests.get(f'https://api.themoviedb.org/3/search/movie?api_key={api_token}&language=pt-BR&query={movie}&page=1&include_adult=false')
-    await ctx.send(f'{response.json()}')
+    await ctx.send('Buscando filmes...')
+    results = get_movies_per_page(movie)
+    embed=discord.Embed(
+        title=f'Lista de filmes com *{movie}* no título',
+        color=discord.Colour.gold()
+    )
+    
+    for movie in results:
+        embed.add_field(
+            name=f'ID:{movie[2]}', value=f'{movie[0]} • {movie[1]}', inline=False
+        )
+    
+    await ctx.send(embed=embed)
+    
+@client.command()
+async def infos(ctx, movie_id):
+    infos = get_movie_info(movie_id)
+    embed=discord.Embed(
+        title=f'{infos["title"]} ({infos["original_title"]})',
+        color=discord.Colour.gold()
+    )
+    
+    embed.set_thumbnail(url=infos['poster'])
+    embed.add_field(name="Ano de lançamento", value=infos['release_year'], inline=True)
+    embed.add_field(name="Direção", value=infos['director'], inline=True) 
+    embed.add_field(name="Elenco", value=infos['cast'], inline=False)
+    
+    embed.set_footer(text="Essas infos foram coletadas via TMDB API.")
 
+    await ctx.send(embed=embed)
+    
 client.run(token)
