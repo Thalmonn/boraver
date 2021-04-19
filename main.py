@@ -1,9 +1,13 @@
 import discord
 from discord.ext import commands
 import os
+import requests
+from sm import get_movies_per_page
+from info import get_movie_info
 
 client = commands.Bot(command_prefix='bv!')
 token = os.getenv('DISCORD_BOT_TOKEN')
+api_token = os.getenv('THEMOVIEDB_API_KEY')
 
 @client.event
 async def on_ready():
@@ -14,11 +18,11 @@ async def on_ready():
     
 @client.command()
 async def ping(ctx):
-    await ctx.send('🏓 Pong com latência %s.' % str(round(client.latency, 2)))
+    await ctx.send(f'🏓 Pong com latência {round(client.latency, 2)}')
 
 @client.command()
 async def usercheck(ctx):
-    await ctx.send('Você é o usuário: %s.' % ctx.message.author.name)
+    await ctx.send(f'Você é o usuário: {ctx.message.author.name}.')
     
 @client.command()
 @commands.is_owner()
@@ -27,4 +31,37 @@ async def turnoff(ctx):
     await client.close()
     print('Bot desligado com sucesso. Até a próxima.')
 
+@client.command()
+async def sm(ctx, movie):
+    await ctx.send('Buscando filmes...')
+    results = get_movies_per_page(movie)
+    embed=discord.Embed(
+        title=f'Lista de filmes com *{movie}* no título',
+        color=discord.Colour.gold()
+    )
+    
+    for movie in results:
+        embed.add_field(
+            name=f'ID:{movie[2]}', value=f'{movie[0]} • {movie[1]}', inline=False
+        )
+    
+    await ctx.send(embed=embed)
+    
+@client.command()
+async def infos(ctx, movie_id):
+    infos = get_movie_info(movie_id)
+    embed=discord.Embed(
+        title=f'{infos["title"]} ({infos["original_title"]})',
+        color=discord.Colour.gold()
+    )
+    
+    embed.set_thumbnail(url=infos['poster'])
+    embed.add_field(name="Ano de lançamento", value=infos['release_year'], inline=True)
+    embed.add_field(name="Direção", value=infos['director'], inline=True) 
+    embed.add_field(name="Elenco", value=infos['cast'], inline=False)
+    
+    embed.set_footer(text="Essas infos foram coletadas via TMDB API.")
+
+    await ctx.send(embed=embed)
+    
 client.run(token)
