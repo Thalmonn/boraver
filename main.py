@@ -32,18 +32,20 @@ async def turnoff(ctx):
     print('Bot desligado com sucesso. Até a próxima.')
 
 @client.command()
-async def sm(ctx, movie):
+async def sm(ctx, *, movie):
     await ctx.send('Buscando filmes...')
     results = get_movies_per_page(movie)
+    
+    lines = [
+        f'`ID: {movie[2]}` **{movie[0]}** • {movie[1]}'
+        for movie in results
+    ]
+    
     embed=discord.Embed(
         title=f'Lista de filmes com *{movie}* no título',
-        color=discord.Colour.gold()
+        color=discord.Colour.gold(),
+        description= '\n'.join(lines)[:2048]
     )
-    
-    for movie in results:
-        embed.add_field(
-            name=f'ID:{movie[2]}', value=f'{movie[0]} • {movie[1]}', inline=False
-        )
     
     await ctx.send(embed=embed)
     
